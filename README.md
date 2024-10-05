@@ -75,6 +75,40 @@ For learners and new developers, this project serves as an excellent educational
 
 By utilizing this project, developers can quickly bootstrap a web application while benefiting from the features and utilities provided by the chosen technologies.
 
+# Installation of degit
+
+To install `degit`, you can use either NPM or Yarn. Follow the steps below:
+
+## Using NPM orr yarn
+
+Run the following command in your terminal to install `degit` globally:
+
+```bash
+npm install -g degit
+#or yarn
+yarn global add degit
+```
+
+## Verification
+
+After installation, you can verify that degit is installed correctly by checking its version:
+
+```bash
+degit --version
+```
+
+## Cloning project
+
+```bash
+degit duxnovate/duxter name_app
+```
+
+## ✿ If Using Bun
+
+```bash
+bun create duxnovate/duxter name_app
+```
+
 ## ⚙️ Environment Setup
 
 ### Before running the project, configure the environment variables. You can create a .env file by copying the example configuration:
