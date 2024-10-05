@@ -6,7 +6,7 @@
   "devDependencies": {
     "@types/bun": "latest"
   },
-  "author": "Mawa",
+  "author": "duxnovate",
   "license": "MIT",
   "scripts": {
     "dev": "bun run main.ts --watch",

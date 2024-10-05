@@ -16,7 +16,7 @@ interface MigrationResults {
   failure: string[];
 }
 
-const runMigrations = async () => {
+const runMigrations = async (): Promise<void> => {
   const migrationsDir = path.join(__dirname, "../migrations");
   const migrationResults: MigrationResults = {
     success: [],
@@ -44,18 +44,21 @@ const runMigrations = async () => {
         }
       }
     }
-  } catch (err) {
-    console.error("Error reading migrations directory:", err);
+  } catch (error) {
+    console.error("Error reading migrations directory:", error);
   } finally {
     await db.destroy();
   }
 
+  printMigrationSummary(migrationResults);
+};
+
+const printMigrationSummary = (migrationResults: MigrationResults): void => {
+  const totalMigrations =
+    migrationResults.success.length + migrationResults.failure.length;
+
   console.log("\nMigration Summary:");
-  console.log(
-    `Total Migrations: ${
-      migrationResults.success.length + migrationResults.failure.length
-    }`
-  );
+  console.log(`Total Migrations: ${totalMigrations}`);
   console.log(`Successful Migrations: ${migrationResults.success.length}`);
   console.log(`Failed Migrations: ${migrationResults.failure.length}`);
 
