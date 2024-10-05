@@ -11,7 +11,8 @@
   "scripts": {
     "dev": "bun run main.ts --watch",
     "build": "bun build main.ts --bundle --outdir dist --minify",
-    "migrate": "bun run src/database/config/migrate.ts"
+    "migrate": "bun run src/database/config/migrate.ts",
+    "env": "cp .env.example .env"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
