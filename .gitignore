@@ -13,6 +13,7 @@ lerna-debug.log*
 # Caches
 
 .cache
+bun.lockb
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 
@@ -173,3 +174,4 @@ dist
 
 # Finder (MacOS) folder config
 .DS_Store
+
