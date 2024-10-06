@@ -1,0 +1,19 @@
+{
+  "extends": "fastify-tsconfig",
+  "compilerOptions": {
+    "outDir": "dist",
+    "sourceMap": true,
+    "baseUrl": "src",
+    "paths": {
+      "@configs/*": ["configs/*"],
+      "@controller/*": ["controller/*"],
+      "@database/*": ["database/*"],
+      "@models/*": ["database/models/*"],
+      "@plugins/*": ["plugins/*"],
+      "@routes/*": ["routes/*"],
+      "@service/*": ["service/*"],
+      "@utils/*": ["utils/*"]
+    }
+  },
+  "include": ["src/**/*.ts", "src/types.d.ts"]
+}
